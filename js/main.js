@@ -804,7 +804,7 @@
 
   pages.about = () => {
     const a = S.about;
-    const chibis = S.characters.map((c) => `<img src="images/${esc(c.id)}/chibi.gif" alt="" loading="lazy">`).join('');
+    const chibis = S.characters.map((c) => `<img src="images/${esc(c.id)}/miiqm-saki.gif" alt="" loading="lazy">`).join('');
     page.innerHTML = head('about') +
       `<div class="stack">
         ${panel('PROFILE', `<div class="about-me"><div class="chibis">${chibis}</div><div><p class="about-name">${esc(S.author)}</p><p class="pre">${esc(a.text)}</p></div></div>`)}
