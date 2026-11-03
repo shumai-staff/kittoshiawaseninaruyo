@@ -943,3 +943,6 @@ ruby rt { font-size: .5em; color: var(--lilac); }
     transition-duration: .01ms !important;
   }
 }
+
+/* 追加遊戲文字效果 */
+.game.is-bad .msg-text { color: #922628； }
