@@ -198,11 +198,11 @@ window.SITE = {
 
   /* 服 */
   wardrobe: [
-    { chara: 'saki',   name: 'お気に入りの日常服', image: 'images/gallery/plu-saki-nbg.png', note: 'いつも着てる\n出發後兩個人一起買的第一套新衣服\n\nDesign by / 噗幣轉蛋' },
-    { chara: 'hinano', name: 'お気に入りの日常服', image: 'images/gallery/plu-saki-nbg.png', note: 'いつも着てる\n出發後兩個人一起買的第一套新衣服\n\nDesign by / 噗幣轉蛋' },
+    { chara: 'saki',   name: '+', image: 'images/gallery/plu-saki-nbg.1.png', note: 'いつも着てる\n出發後兩個人一起買的第一套新衣服\n\nDesign by / 噗幣轉蛋' },
+    { chara: 'hinano', name: '+', image: 'images/gallery/plu-hinano-nbg.1.png', note: 'いつも着てる\n出發後兩個人一起買的第一套新衣服\n\nDesign by / 噗幣轉蛋' },
 
-    { chara: 'saki',   name: 'ゆっるとお出かけるコーデ', image: 'images/gallery/ming-hinano.png', note: 'Design by /  阿明 ' },
-    { chara: 'hinano', name: 'ゆっるとお出かけるコーデ', image: 'images/gallery/ming-hinano.png', note: 'Design by /  阿明 ' },
+    { chara: 'saki',   name: '+', image: 'images/gallery/ming-saki.png', note: 'Design by /  阿明 ' },
+    { chara: 'hinano', name: '+', image: 'images/gallery/ming-hinano.png', note: 'Design by /  阿明 ' },
   ],
 
   /* UPDATE */
