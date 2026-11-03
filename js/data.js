@@ -74,7 +74,8 @@ window.SITE = {
   /* INTRO */
   intro: {
     vertical: true,
-    text: `「  二人で探しましょう、幸せになる方法  」
+    text: `「  二人で探しましょう、
+    幸せになる方法  」
 
 內文施工中
 
@@ -154,7 +155,7 @@ window.SITE = {
   ],
 
   relationship: {
-    title: '離家出走中　共依存的兩人♡',
+    title: '',
     sliders: [
       { label: '主導権', saki: 30,  hinano: 80 },
       { label: '独占欲', saki: 90,  hinano: 40 },
@@ -163,34 +164,21 @@ window.SITE = {
       { label: '素直さ', saki: 85, hinano: 10 },
       { label: '依存度', saki: 100, hinano: 100 },
     ],
-    text: `沒有在交往
-理所當然的維持著等同交往的肢體接觸和距離感
-除了對方已經別無所有了
-所以要把對方抓的緊緊的絕對不分開，就這樣每天每天互相撒嬌和溺愛的甜蜜日常♡`,
+    text: `工事中……`,
   },
 
   /* GALLERY
   往上添加最新 thumb = 縮圖*/
   gallery: [
-    { title: 'ゆらゆら', date: '2026/11/03', image: 'images/hinano/chibi-bg.gif' },
+    { title: 'アユ　様', date: '2025/07/15', image: 'images/gallery/ayu-saki.png',  },
   ],
 
   /* STORY */
   stories: [
     {
-      id: '002',
-      type: 'comic',
-      title: '（サンプル）短い漫画',
-      date: '2026/11/03',
-      pages: [
-        'images/saki/sd.png',
-        'images/hinano/sd.png',
-      ],
-    },
-    {
       id: '001',
       type: 'novel',
-      title: '（サンプル）はじめての夜',
+      title: '試作',
       date: '2026/11/03',
       file: 'stories/001.txt',
     },
@@ -207,14 +195,14 @@ window.SITE = {
 
   /* UPDATE */
   updates: [
-    { date: '2026/11/03', text: 'サイトを公開しました。' },
+    { date: '2026/11/04', text: '測試。' },
   ],
 
   /* ABOUT */
   about: {
-    text: `（作者の自己紹介をここに）`,
+    text: ` `,
     links: [
-      { label: 'X', url: 'https://x.com/' },
+      { label: '施工', url: ' ' },
     ],
     rules: `無断転載・自作発言・AI学習への使用はご遠慮ください。
 禁止轉載、自稱原創、用於 AI 學習。`,
