@@ -74,11 +74,11 @@ window.SITE = {
   /* INTRO */
   intro: {
     vertical: true,
-    text: '「  二人で探しましょう、幸せになる方法  」
-      
+    text: `「  二人で探しましょう、幸せになる方法  」
+
 內文施工中
 
-……',
+……`,
   },
 
   /* CHAR */
