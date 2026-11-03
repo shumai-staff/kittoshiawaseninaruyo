@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>二人のわんだーらんど♡</title>
+<meta name="description" content="オリジナルキャラクターのサイト">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500..800&family=DotGothic16&family=Zen+Old+Mincho:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-bg="scene">
+
+<!-- 背景（路地裏の写真） -->
+<div class="bg" aria-hidden="true"><div class="bg-blur" id="bg-blur"></div><div class="bg-photo" id="bg-photo"></div><div class="bg-shade"></div></div>
+
+<div id="app">
+
+  <!-- ===== タイトル＆オープニング ===== -->
+  <section id="view-title" class="view" hidden>
+    <button class="title-screen" id="title-start" type="button">
+      <span class="sys press">
+        <span class="only-mouse">クリックして始める</span><span class="only-touch">タップして始める</span>
+      </span>
+    </button>
+
+    <div class="game" id="game" hidden>
+      <div class="game-stage" id="game-stage"></div>
+      <div class="choices" id="choices" hidden></div>
+
+      <div class="msg" id="msg">
+        <span class="auto-flag sys" aria-hidden="true">AUTO</span>
+        <div class="msg-name" id="msg-name"></div>
+        <p class="msg-text" id="msg-text" aria-live="polite"></p>
+        <span class="msg-next" id="msg-next" aria-hidden="true">▼</span>
+        <nav class="quick" aria-label="ゲームメニュー">
+          <button class="kbtn" data-act="auto" data-img="auto" aria-pressed="false"><span class="sr">Auto</span></button>
+          <button class="kbtn" data-act="skip" data-img="skip"><span class="sr">Skip</span></button>
+          <button class="kbtn" data-act="log" data-img="log"><span class="sr">Log</span></button>
+          <button class="kbtn" data-act="screen" data-img="screen"><span class="sr">Screen</span></button>
+          <button class="kbtn" data-act="menu" data-img="menu"><span class="sr">Menu</span></button>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== メインメニュー ===== -->
+  <section id="view-menu" class="view" hidden>
+    <div class="menu-center">
+      <h1 class="menu-logo glitch" id="menu-logo"></h1>
+      <nav class="menu-list" id="menu-list" aria-label="メインメニュー"></nav>
+      <p class="credit" id="credit"></p>
+    </div>
+  </section>
+
+  <!-- ===== 各ページ ===== -->
+  <section id="view-page" class="view" hidden>
+    <header class="topbar">
+      <a class="back-btn" id="back-btn" href="#menu"><span aria-hidden="true">◀</span> BACK</a>
+      <a class="mini-logo" id="mini-logo" href="#menu"></a>
+      <button class="txt-btn end" data-act="menu">MENU</button>
+    </header>
+    <div class="page" id="page"></div>
+  </section>
+
+</div>
+
+<!-- ===== メニュー（どこからでも開ける） ===== -->
+<div class="overlay" id="ov-menu" hidden role="dialog" aria-modal="true" aria-label="メニュー">
+  <div class="ov-inner">
+    <p class="ov-title">Menu</p>
+    <nav class="menu-list" id="ov-menu-list"></nav>
+    <div class="ov-foot">
+      <button class="txt-btn" data-act="title">TITLE</button>
+      <button class="txt-btn" data-act="close">CLOSE</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ログ ===== -->
+<div class="overlay" id="ov-log" hidden role="dialog" aria-modal="true" aria-label="ログ">
+  <div class="ov-inner log-inner">
+    <p class="ov-title">Log</p>
+    <ol class="log-list" id="log-list"></ol>
+    <div class="ov-foot">
+      <button class="kbtn" data-act="close" data-img="close"><span class="sr">Close</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 読み込み中 ===== -->
+<div class="overlay loading" id="ov-load" hidden aria-live="polite">
+  <img class="load-pet" id="load-pet" alt="">
+  <p class="sys">Now Loading<span class="dots"></span></p>
+  <div class="load-bar"><i></i></div>
+</div>
+
+<!-- ===== 画像ビューア ===== -->
+<div class="overlay viewer" id="ov-view" hidden role="dialog" aria-modal="true" aria-label="画像">
+  <div class="viewer-box">
+    <div class="viewer-img">
+      <button class="arrow prev" id="view-prev" aria-label="前の画像"></button>
+      <img id="view-img" alt="">
+      <button class="arrow next" id="view-next" aria-label="次の画像"></button>
+    </div>
+    <div class="viewer-foot">
+      <p class="viewer-cap"><span class="sys" id="viewer-no"></span><span id="viewer-title"></span><span class="sys date" id="view-date"></span></p>
+      <button class="txt-btn" data-act="close">CLOSE</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 画面切り替えの演出 ===== -->
+<div class="tear" id="tear" aria-hidden="true" hidden><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
