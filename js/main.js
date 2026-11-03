@@ -1,7 +1,3 @@
-/* =========================================================
-   わんだーらんど♡ — 動作の部分
-   內容（文字、圖片）請改 js/data.js，這個檔案通常不用動。
-   ========================================================= */
 (() => {
   'use strict';
 
@@ -24,7 +20,7 @@
   const logoHTML = (t) => esc(t).replace(/♡/g, PXHEART).replace(/\n/g, '<br>');
   const TITLE = S.title.replace(/\n/g, '');
 
-  /* ---------- 基本の文字 ---------- */
+  /* 文字 */
   document.title = TITLE;
   const menuLogo = $('#menu-logo');
   menuLogo.innerHTML = logoHTML(S.title);
@@ -38,7 +34,7 @@
   $('#menu-list').innerHTML = [...S.menu, { id: 'title', label: 'TITLE', ja: 'はじめから' }].map(menuBar).join('');
   $('#ov-menu-list').innerHTML = S.menu.map(menuBar).join('');
 
-  // 背景写真
+  /* 背景写真 */
   if (S.background) {
     const url = `url("${S.background}")`;
     $('#bg-blur').style.backgroundImage = url;
@@ -49,18 +45,18 @@
   }
   const setBg = (mode) => { document.body.dataset.bg = mode; };
 
-  // ホバー画像の先読み
+  /* ホバー画像の先読み */
   for (const n of ['auto', 'skip', 'log', 'screen', 'menu', 'title', 'close']) new Image().src = `images/ui/${n}-hover.png`;
   for (const n of ['select-hover', 'select-active']) new Image().src = `images/ui/${n}.png`;
 
-  /* ---------- 画面の切り替え ---------- */
+  /* 画面の切り替え */
   const views = { title: $('#view-title'), menu: $('#view-menu'), page: $('#view-page') };
   function show(name) {
     for (const [k, v] of Object.entries(views)) v.hidden = k !== name;
   }
 
 
-  /* ---------- オーバーレイ ---------- */
+  /* オーバーレイ */
   let openOv = null;
   let lastFocus = null;
   function openOverlay(id) {
@@ -89,7 +85,7 @@
 
   function loading(ms = 650) {
     const ov = $('#ov-load');
-    const pets = S.characters.map((c) => c.pet).filter(Boolean);
+    const pets = S.loadingImages.map((c) => c.pet).filter(Boolean);
     const img = $('#load-pet');
     if (pets.length) { img.src = pickOne(pets); img.hidden = false; } else img.hidden = true;
     const dur = reduce ? 120 : ms;
@@ -117,7 +113,7 @@
     return wait(520);
   }
 
-  /* ---------- ボタンの動作 ---------- */
+  /* ボタンの動作 */
   document.addEventListener('click', (e) => {
     const b = e.target.closest('[data-act]');
     if (!b) return;
@@ -172,9 +168,7 @@
     go('menu');
   }
 
-  /* =========================================================
-     オープニング（文字遊戲）
-     ========================================================= */
+  /* 開頭 */
   const game = $('#game');
   const msg = $('#msg');
   const msgName = $('#msg-name');
@@ -348,18 +342,14 @@
     list.scrollTop = list.scrollHeight;
   }
 
-  /* =========================================================
-     メインメニュー
-     ========================================================= */
+  /* 主選單 */
   function showMenu() {
     show('menu');
     setBg('menu');
     document.title = TITLE;
   }
 
-  /* =========================================================
-     各ページ
-     ========================================================= */
+  /* 跳轉頁 */
   const page = $('#page');
   const menuOf = (id) => S.menu.find((m) => m.id === id) || { label: id, ja: '' };
   function head(id) {
@@ -372,15 +362,14 @@
 
   const pages = {};
 
-  /* ---------- INTRODUCTION ---------- */
+  /* INTRO */
   pages.intro = () => {
     const it = S.intro;
     page.innerHTML = head('intro') +
       `<div class="intro">${panel('', `<p class="intro-text${it.vertical ? ' vertical' : ''}">${esc(it.text)}</p>`)}</div>`;
   };
 
-  /* ---------- 立ち絵の自動フレーミング ----------
-     透明部分を除いた人物の範囲を調べて、全身／半身の表示位置を計算する */
+   /* CHAR */
   const boxCache = new Map();
   function figureBox(img) {
     const key = img.currentSrc || img.src;
@@ -445,7 +434,7 @@
     img.style.transform = `translate(${tx.toFixed(1)}px, ${ty.toFixed(1)}px) scale(${s.toFixed(4)})`;
   }
 
-  // ふたり並び：身長の比率を保って、足元をそろえる
+
   function framePair(stageEl, imgs, heights) {
     if (imgs.some((im) => !im.naturalWidth)) return;
     const W = stageEl.clientWidth;
@@ -494,7 +483,7 @@
     resizeTimer = setTimeout(() => { if (refit) refit(); }, 120);
   });
 
-  /* ---------- キャラクター選択（大頭アイコン） ---------- */
+  /* キャラクター選択 */
   function selectHTML(active) {
     return `<div class="select" role="group" aria-label="キャラクターを選ぶ">${S.characters.map((c, i) =>
       `<button class="pick" data-i="${i}" style="--c:${esc(c.color)}" aria-pressed="${i === active}">
@@ -502,7 +491,6 @@
       </button>`).join('')}</div>`;
   }
 
-  /* ---------- CHARACTER ---------- */
   const CH = { i: 0, full: true };
   let fitPair = null;
 
@@ -548,7 +536,6 @@
     if (rel) buildPair();
   };
 
-  // 半身＝去背の立ち絵を拡大／全身＝排版つきの立ち絵（card）に切り替え
   function applyZoom(instant = false) {
     const img = $('#stage-img');
     const btn = $('#expand');
@@ -610,7 +597,6 @@
     st.classList.remove('is-swapping');
   }
 
-  // 下にスクロールすると出てくる「ふたり」の区画
   async function buildPair() {
     const cs = S.characters;
     const rel = S.relationship;
@@ -632,7 +618,6 @@
           </li>`).join('')}</ul>`, 'rel') +
       (rel.text ? panel(rel.title || '', `<p class="rel-text">${esc(rel.text)}</p>`) : '');
 
-    // 拉桿：見えたら中央からそれぞれの位置へ
     const marks = $$('.mk', side);
     const play = () => marks.forEach((m) => { m.style.left = m.dataset.v + '%'; });
     if ('IntersectionObserver' in window && !reduce) {
@@ -660,7 +645,7 @@
     return `rgba(${parseInt(m[1], 16)}, ${parseInt(m[2], 16)}, ${parseInt(m[3], 16)}, ${a})`;
   }
 
-  /* ---------- セーブ画面風のリスト ---------- */
+  /* リスト */
   const PER_PAGE = 8;
   function slotsHTML(list, pageNo, render) {
     const start = pageNo * PER_PAGE;
@@ -676,7 +661,7 @@
     return `<span class="slot-thumb${isTransparent(src) ? ' fit-contain' : ''}"><img src="${esc(src)}" alt="" loading="lazy"></span>`;
   }
 
-  /* ---------- GALLERY ---------- */
+  /* GALLERY */
   let galleryPage = 0;
   pages.gallery = () => {
     const list = S.gallery;
@@ -717,7 +702,7 @@
   $('#view-prev').addEventListener('click', () => stepViewer(-1));
   $('#view-next').addEventListener('click', () => stepViewer(1));
 
-  /* ---------- STORY ---------- */
+  /* STORY */
   let storyPage = 0;
   const TYPE = { novel: '小説', comic: '漫画' };
   pages.story = () => {
@@ -777,7 +762,6 @@
       });
   }
 
-  // 文字檔的格式：空一行＝換段落、｜漢字《かんじ》＝注音、![](圖片路徑)＝插圖
   function parseNovel(text) {
     return text.replace(/\r\n?/g, '\n').trim().split(/\n\s*\n/).map((block) => {
       const img = /^!\[([^\]]*)\]\(([^)]+)\)$/.exec(block.trim());
@@ -789,7 +773,7 @@
     }).join('');
   }
 
-  /* ---------- WARDROBE ---------- */
+  /* 衣 */
   const WD = { c: 0, k: 0 };
   pages.wardrobe = () => {
     const c = S.characters[WD.c];
@@ -812,14 +796,13 @@
     }
   };
 
-  /* ---------- UPDATE ---------- */
+  /* LAST */
   pages.update = () => {
     page.innerHTML = head('update') +
       `<div class="stack">${panel('',
         `<ul class="updates">${S.updates.map((u) => `<li><time>${esc(u.date)}</time><span>${esc(u.text)}</span></li>`).join('')}</ul>`)}</div>`;
   };
 
-  /* ---------- ABOUT ---------- */
   pages.about = () => {
     const a = S.about;
     const chibis = S.characters.map((c) => `<img src="images/${esc(c.id)}/chibi.gif" alt="" loading="lazy">`).join('');
@@ -831,9 +814,6 @@
       </div>`;
   };
 
-  /* =========================================================
-     ルーティング（網址的 # 決定顯示哪一頁）
-     ========================================================= */
   function route() {
     const h = decodeURIComponent(location.hash.slice(1));
     closeOverlay(false);
