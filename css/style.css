@@ -946,3 +946,5 @@ ruby rt { font-size: .5em; color: var(--lilac); }
 
 /* 追加遊戲文字效果 */
 .game.is-bad .msg-text { color: #922628； }
+
+.msg-text { white-space: pre-line； }
