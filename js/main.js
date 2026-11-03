@@ -84,7 +84,7 @@
 
   function loading(ms = 650) {
     const ov = $('#ov-load');
-    const pets = S.loadingImages.map((c) => c.pet).filter(Boolean);
+    const pets = S.loadingImages || S.characters.map((c) => c.pet).filter(Boolean);
     const img = $('#load-pet');
     if (pets.length) { img.src = pickOne(pets); img.hidden = false; } else img.hidden = true;
     const dur = reduce ? 120 : ms;
