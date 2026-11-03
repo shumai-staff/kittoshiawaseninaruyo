@@ -19,6 +19,13 @@ window.SITE = {
   /* 網站背景照片 */
   background: 'images/bg/alley.jpg',
 
+  loadingImagines: [
+     'images/futari/komaru02.3.png',
+     'images/futari/nes01-nbg.png',
+     'images/futari/nes02.png',
+     'images/futari/ogura-an3.png',
+   ],
+   
   /* ---------- 主選單 ----------
      label：選單上顯示的英文
      ja：底下的小字
@@ -108,12 +115,11 @@ window.SITE = {
       name: '早紀',
       reading: 'SAKI',
       color: '#8796de',
-      full: 'images/saki/full.png',
-      card: 'images/saki/card.png',
-      icon: 'images/saki/icon.png',
-      pet: 'images/saki/pet.png',
+      full: 'images/saki/plu-saki-nbg.1.png',
+      card: 'images/saki/plu-saki-nbg.2.png',
+      icon: 'images/saki/spfh-saki.2.png',
       heightCm: 172,
-      tags: ['攻め', '王子様系', 'イケメン女子'],
+      tags: ['王子様系', 'イケメン女子'],
       profile: [
         ['性別', '女'],
         ['年齢', '17'],
@@ -143,10 +149,9 @@ window.SITE = {
       name: '姫奈乃',
       reading: 'HINANO',
       color: '#e4a9c5',
-      full: 'images/hinano/full.png',
-      card: 'images/hinano/card.png',
-      icon: 'images/hinano/icon.png',
-      pet: 'images/hinano/pet.png',
+      full: 'images/hinano/plu-hinano-nbg.1.png',
+      card: 'images/hinano/plu-hinano-nbg.1.png',
+      icon: 'images/hinano/spfh-hinano.2.png',
       heightCm: 150,
       tags: ['受け', '無口', '地雷系女子'],
       profile: [
@@ -181,13 +186,12 @@ window.SITE = {
   relationship: {
     title: '離家出走中　共依存的兩人♡',
     sliders: [
-      { label: '主導権', saki: 20,  hinano: 80 },
+      { label: '主導権', saki: 30,  hinano: 80 },
       { label: '独占欲', saki: 90,  hinano: 40 },
+      { label: '甘え', saki: 55, hinano: 80 },
+      { label: '甘やかし', saki: 75, hinano: 65 },
+      { label: '素直さ', saki: 85, hinano: 10 },
       { label: '依存度', saki: 100, hinano: 100 },
-      { label: '（項目）', saki: 50, hinano: 50 },
-      { label: '（項目）', saki: 50, hinano: 50 },
-      { label: '（項目）', saki: 50, hinano: 50 },
-      { label: '（項目）', saki: 50, hinano: 50 },
     ],
     text: `沒有在交往
 理所當然的維持著等同交往的肢體接觸和距離感
@@ -199,13 +203,6 @@ window.SITE = {
      新作品加在「最上面」，編號會自動往上加
      thumb（縮圖）可以不填，不填就直接用原圖 */
   gallery: [
-    { title: 'ふたり（差分）', date: '2026/11/03', image: 'images/gallery/duo-02.jpg', thumb: 'images/gallery/thumbs/duo-02.jpg' },
-    { title: 'ふたり', date: '2026/11/03', image: 'images/gallery/duo-01.jpg', thumb: 'images/gallery/thumbs/duo-01.jpg' },
-    { title: 'あーん', date: '2026/11/03', image: 'images/gallery/duo-03.png', thumb: 'images/gallery/thumbs/duo-03.jpg' },
-    { title: 'ちびキャラ', date: '2026/11/03', image: 'images/gallery/chibi-duo.png', thumb: 'images/gallery/thumbs/chibi-duo.png' },
-    { title: 'SD', date: '2026/11/03', image: 'images/saki/sd.png', thumb: 'images/gallery/thumbs/saki-sd.png' },
-    { title: 'SD', date: '2026/11/03', image: 'images/hinano/sd.png', thumb: 'images/gallery/thumbs/hinano-sd.png' },
-    { title: 'ゆらゆら', date: '2026/11/03', image: 'images/saki/chibi-bg.gif' },
     { title: 'ゆらゆら', date: '2026/11/03', image: 'images/hinano/chibi-bg.gif' },
   ],
 
