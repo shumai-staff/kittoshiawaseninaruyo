@@ -74,13 +74,11 @@ window.SITE = {
   /* INTRO */
   intro: {
     vertical: true,
-    text: `（ここに物語のあらすじが入ります）
+    text: '「  二人で探しましょう、幸せになる方法  」
+      
+內文施工中
 
-ふたりが家を出た日のこと、
-どこへ向かっているのか、
-何を探しているのか。
-
-このあたりに数行でまとめてください。`,
+……',
   },
 
   /* CHAR */
@@ -94,7 +92,7 @@ window.SITE = {
       card: 'images/saki/plu-saki-nbg.2.png',
       icon: 'images/saki/spfh-saki.2.png',
       heightCm: 172,
-      tags: ['王子様系', 'イケメン女子'],
+      tags: ['王子系', 'イケメン女子'],
       profile: [
         ['性別', '女'],
         ['年齢', '17'],
