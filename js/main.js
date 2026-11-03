@@ -15,7 +15,6 @@
   const panel = (title, body, cls = '') =>
     `<section class="panel ${cls}">${title ? `<h3 class="panel-title">${esc(title)}</h3>` : ''}${body}</section>`;
 
-  // ドット絵のハート（♡ をこれに置き換える）
   const PXHEART = '<svg class="pxheart" viewBox="0 0 7 6" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><path d="M1 0h2v1H1zM4 0h2v1H4zM0 1h1v2H0zM3 1h1v1H3zM6 1h1v2H6zM1 3h1v1H1zM5 3h1v1H5zM2 4h1v1H2zM4 4h1v1H4zM3 5h1v1H3z"/></svg>';
   const logoHTML = (t) => esc(t).replace(/♡/g, PXHEART).replace(/\n/g, '<br>');
   const TITLE = S.title.replace(/\n/g, '');
