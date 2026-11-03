@@ -29,40 +29,45 @@ window.SITE = {
   opening: [
     {
       speaker: '',
-      lines: ['ねえ、一緒に逃げない？', '私と。'],
+      lines: ['ねえ、一緒に逃げない？\n私と。'],
       choices: [
-        { text: '……え？' },
-        { text: '……逃げるって？' },
+        { text: '……え？', correct: true },
+        { text: '……逃げるって？', correct: true },
         { text: '……。', correct: true },
       ],
     },
     {
       speaker: '',
-      lines: ['（第2段のセリフ）'],
+      lines: ['二人だけの居場所は\nきっと、何処かにあるから'],
       choices: [
-        { text: 'いや、そんなこと急に……' },
         { text: '……。' },
+        { text: 'いや、そんなこと急に……' },
         { text: 'わかった', correct: true },
       ],
     },
     {
       speaker: '',
-      lines: ['（第3段のセリフ）'],
+      lines: ['……。'],
       choices: [
-        { text: '（選択肢）' },
-        { text: '（選択肢）' },
         { text: '一緒に行こう', correct: true },
+      ],
+    },
+    {
+      speaker: '',
+      lines: ['……。'],
+      choices: [
+        { text: '二人で探しましょう、幸せになる方法', correct: true },
       ],
     },
   ],
    
   badEnd: {
     speaker: '',
-    lines: ['（選錯したときのセリフ）'],
+    lines: ['二人だけの居場所二人二人だけの居場所はきっと何処か\nにあるからだけの居場所はきっと何処かにあるからはき\n二人だ二人だけの居場所はの居場所はきっと何処か居場','きっと、何処かにあるから'],
     choices: [
-      { text: '（選択肢）' },
-      { text: '（選択肢）' },
-      { text: '（選択肢）' },
+      { text: '……。' },
+      { text: '……。' },
+      { text: '……。' },
     ],
   },
 
