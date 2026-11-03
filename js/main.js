@@ -245,7 +245,7 @@
       i += 1;
       msgText.textContent = chars.slice(0, i).join('');
       if (i >= chars.length) finishLine();
-    }, 45);
+    }, G.phase === 'bad' ? 20 : 45);
   }
 
   function finishLine() {
