@@ -1,11 +1,3 @@
-/* =========================================================
-   わんだーらんど♡ — style
-   配色：
-   --blue  ＝ 早紀（毛先の色）
-   --pink  ＝ 姫奈乃（リボンの色）
-   --violet＝ UI素材の紫
-   ========================================================= */
-
 :root {
   --night: #100d18;
   --violet: #7052cc;
@@ -57,7 +49,7 @@ button { font: inherit; color: inherit; }
 
 .sys { font-family: var(--pixel); letter-spacing: .08em; color: var(--lilac); }
 
-/* ---------- 背景（路地裏） ---------- */
+/* 背景 */
 .bg { position: fixed; inset: 0; z-index: -1; overflow: hidden; background: var(--night); }
 .bg-blur, .bg-photo {
   position: absolute;
@@ -96,7 +88,7 @@ body[data-bg="page"] .bg-blur { filter: blur(28px) brightness(.26) saturate(1.1)
 body[data-bg="plain"] .bg-photo,
 body[data-bg="plain"] .bg-blur { opacity: 0; }
 
-/* ---------- ロゴ（ドット文字） ---------- */
+/* logo */
 .menu-logo, .mini-logo {
   font-family: var(--pixel);
   font-weight: 400;
@@ -105,7 +97,6 @@ body[data-bg="plain"] .bg-blur { opacity: 0; }
 }
 .pxheart { display: inline-block; height: .8em; width: auto; margin-left: .06em; vertical-align: -.04em; }
 
-/* ロゴの色ずれ：短く揺れて、1秒止まって、また揺れる */
 .glitch { position: relative; display: inline-block; }
 .glitch::before,
 .glitch::after {
@@ -133,7 +124,7 @@ body[data-bg="plain"] .bg-blur { opacity: 0; }
   25%, 100% { clip-path: inset(100% 0 0 0); transform: none; }
 }
 
-/* ---------- UI素材のボタン ---------- */
+/* button */
 .kbtn {
   width: 80px;
   height: 30px;
@@ -178,7 +169,7 @@ body[data-bg="plain"] .bg-blur { opacity: 0; }
 .bar .en { font-family: var(--didone); font-weight: 700; font-size: 1rem; letter-spacing: .16em; line-height: 1.2; }
 .bar .ja { font-family: var(--pixel); font-size: .6rem; letter-spacing: .12em; color: var(--lilac); line-height: 1.3; }
 
-/* 飾り線（frame_message.png の線と飾り） */
+/* 飾り線 */
 .orn-line {
   display: block;
   height: 26px;
@@ -187,7 +178,7 @@ body[data-bg="plain"] .bg-blur { opacity: 0; }
     linear-gradient(90deg, transparent, var(--line) 12%, var(--line) 88%, transparent) center / 100% 1px no-repeat;
 }
 
-/* パネル（UI素材のメッセージ枠と同じ作り） */
+/* パネル */
 .panel {
   position: relative;
   padding: 30px 26px 30px;
@@ -256,9 +247,7 @@ body[data-bg="plain"] .bg-blur { opacity: 0; }
 @media (hover: hover) { .arrow:hover::before { opacity: 1; } }
 .arrow:focus-visible::before, .arrow:active::before { opacity: 1; }
 
-/* =========================================================
-   タイトル
-   ========================================================= */
+/* 標題 */
 #view-title { position: fixed; inset: 0; overflow: hidden; }
 
 .title-screen {
@@ -280,7 +269,7 @@ body[data-bg="plain"] .bg-blur { opacity: 0; }
 }
 @keyframes breathe { 50% { opacity: .45; } }
 
-/* ---------- ゲーム画面 ---------- */
+/* ゲーム */
 .game { position: absolute; inset: 0; cursor: pointer; }
 .game:focus, .game:focus-visible { outline: none; }
 .game-stage {
@@ -382,9 +371,7 @@ body.is-bad .bg-blur { filter: blur(24px) grayscale(.85) brightness(.3); }
   cursor: default;
 }
 
-/* =========================================================
-   メインメニュー
-   ========================================================= */
+/* メインメニュー */
 .menu-center {
   display: flex;
   flex-direction: column;
@@ -411,9 +398,7 @@ body.is-bad .bg-blur { filter: blur(24px) grayscale(.85) brightness(.3); }
 @keyframes fade-in { from { opacity: 0; } }
 .credit { margin: 4vh 0 0; font-family: var(--pixel); font-size: .7rem; color: var(--mute); }
 
-/* =========================================================
-   各ページ共通
-   ========================================================= */
+/* 跳轉業 */
 .topbar {
   position: sticky;
   top: 0;
@@ -603,7 +588,7 @@ body.is-bad .bg-blur { filter: blur(24px) grayscale(.85) brightness(.3); }
 .p-sec-head { margin: 0 0 4px; font-weight: 700; font-size: 1.08rem; letter-spacing: .06em; }
 .p-sec-text { margin: 0; white-space: pre-line; font-size: .95rem; line-height: 1.9; color: #d8d3e3; }
 
-/* ふたりの関係（共用の拉桿） */
+/* 人設表 */
 .legend { display: flex; justify-content: center; gap: 22px; margin: 0 0 14px; font-family: var(--pixel); font-size: .78rem; }
 .legend span { display: inline-flex; align-items: center; gap: 6px; color: var(--c); }
 .legend i { width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; }
@@ -674,7 +659,7 @@ body.is-bad .bg-blur { filter: blur(24px) grayscale(.85) brightness(.3); }
 .pair-grid .stage-wrap { padding: 0; }
 .chara-side .panel + .panel { margin-top: 34px; }
 
-/* ---------- GALLERY / STORY：セーブ画面 ---------- */
+/* GALLERY / STORY */
 .slots {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -753,7 +738,7 @@ ruby rt { font-size: .5em; color: var(--lilac); }
 }
 .reader-nav a { font-family: var(--pixel); font-size: .85rem; text-decoration: none; }
 
-/* ---------- WARDROBE ---------- */
+/* 衣 */
 .wd {
   display: grid;
   grid-template-columns: 220px auto minmax(0, 420px);
@@ -766,7 +751,7 @@ ruby rt { font-size: .5em; color: var(--lilac); }
 .wd-stage { height: min(72vh, 780px); }
 .wd-note { white-space: pre-line; margin: 0; line-height: 2; }
 
-/* ---------- INTRODUCTION ---------- */
+/* INTRO */
 .intro { max-width: 860px; margin: 14px auto 0; }
 .intro .panel { padding: 40px 32px; }
 .intro-text { margin: 0; white-space: pre-line; font-size: 1.08rem; line-height: 2.1; letter-spacing: .06em; }
@@ -783,7 +768,7 @@ ruby rt { font-size: .5em; color: var(--lilac); }
   }
 }
 
-/* ---------- UPDATE / ABOUT ---------- */
+/* last */
 .stack { display: grid; gap: 48px; max-width: 820px; margin: 14px auto 0; }
 .updates { list-style: none; margin: 0; padding: 0; }
 .updates li {
@@ -804,9 +789,7 @@ ruby rt { font-size: .5em; color: var(--lilac); }
 .links { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 22px; }
 .links a { font-family: var(--pixel); }
 
-/* =========================================================
-   オーバーレイ
-   ========================================================= */
+/* オーバーレイ */
 .overlay {
   position: fixed;
   inset: 0;
@@ -905,9 +888,7 @@ ruby rt { font-size: .5em; color: var(--lilac); }
 }
 @keyframes flash { 0%, 40% { opacity: 0; } 60% { opacity: .95; } 100% { opacity: 0; } }
 
-/* =========================================================
-   スマホ
-   ========================================================= */
+/* スマホ */
 @media (max-width: 899px) {
   .chara { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .chara-side { display: contents; }
