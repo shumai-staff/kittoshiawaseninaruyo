@@ -7,7 +7,7 @@ window.SITE = {
   /* 背景 */
   background: 'images/bg/alley.jpg',
 
-  loadingImagines: [
+  loadingImages: [
      'images/futari/komaru02.3.png',
      'images/futari/nes01-nbg.png',
      'images/futari/nes02.png',
@@ -120,7 +120,7 @@ window.SITE = {
       reading: 'HINANO',
       color: '#e4a9c5',
       full: 'images/hinano/plu-hinano-nbg.1.png',
-      card: 'images/hinano/plu-hinano-nbg.1.png',
+      card: 'images/hinano/plu-hinano-nbg.2.png',
       icon: 'images/hinano/spfh-hinano.2.png',
       heightCm: 150,
       tags: ['受け', '無口', '地雷系女子'],
