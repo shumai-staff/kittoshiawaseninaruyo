@@ -1,22 +1,10 @@
-/* =========================================================
-   網站內容都在這個檔案裡。
-   想改文字、加作品，基本上只需要改這裡。
-
-   小提醒：
-   - 文字要放在引號 ' ' 或反引號 ` ` 裡面。
-     反引號 ` ` 裡面可以直接換行，適合長文章。
-   - 每一筆資料 { ... } 後面要加逗號 ,
-   - 圖片路徑是從網站最外層開始算，例如 images/gallery/xxx.png
-   ========================================================= */
-
 window.SITE = {
 
-  /* ---------- 網站名稱 ----------
-     \n 是換行（主選單會分兩行，分頁標籤和上方小標題會接成一行） */
+  /* 名稱 */
   title: '二人の\nわんだーらんど♡',
-  author: '作者名',
+  author: '焼売病院',
 
-  /* 網站背景照片 */
+  /* 背景 */
   background: 'images/bg/alley.jpg',
 
   loadingImagines: [
@@ -26,10 +14,7 @@ window.SITE = {
      'images/futari/ogura-an3.png',
    ],
    
-  /* ---------- 主選單 ----------
-     label：選單上顯示的英文
-     ja：底下的小字
-     想改名字（例如 INTRODUCTION 改成 PROLOGUE）改 label 就好 */
+  /* 主選單 */
   menu: [
     { id: 'intro',     label: 'INTRODUCTION', ja: 'あらすじ' },
     { id: 'character', label: 'CHARACTER',    ja: 'キャラクター' },
@@ -40,11 +25,7 @@ window.SITE = {
     { id: 'about',     label: 'ABOUT',        ja: 'このサイトについて' },
   ],
 
-  /* ---------- 開頭的文字遊戲 ----------
-     每一段 = 幾句台詞 + 三個選項
-     正確的選項加上 correct: true
-     選錯的會進入 BAD END，再回到第一段
-     （目前的台詞是先借用 Carrd 的句子暫放，等你給正式劇本再換） */
+  /* 開頭 */
   opening: [
     {
       speaker: '',
@@ -74,8 +55,7 @@ window.SITE = {
       ],
     },
   ],
-
-  /* 選錯時進入的對話；三個選項選哪個都會回到第一段 */
+   
   badEnd: {
     speaker: '',
     lines: ['（選錯したときのセリフ）'],
@@ -86,8 +66,7 @@ window.SITE = {
     ],
   },
 
-  /* ---------- INTRODUCTION（故事簡介） ----------
-     vertical: true = 電腦版用直書；手機一律橫書 */
+  /* INTRO */
   intro: {
     vertical: true,
     text: `（ここに物語のあらすじが入ります）
@@ -99,16 +78,7 @@ window.SITE = {
 このあたりに数行でまとめてください。`,
   },
 
-  /* ---------- CHARACTER（角色人設） ----------
-     full：去背的立繪（背景透明 PNG）。半身放大、RELATIONSHIP、WARDROBE 用這張
-     card：有排版的全身立繪，人設頁預設顯示這張；按「半身を見る」才會換成 full 放大（不需要的話整行刪掉，就會改用 full）
-           full 和 card 要是同樣大小的圖，人物位置也要一樣
-     icon：上方選角色用的大頭圖
-     pet：讀取畫面跳來跳去的小動物
-     heightCm：「ふたり」頁面兩人並排時的身高比例
-     tags：名字下面的小標籤
-     profile：左邊是項目，右邊是內容，可以自由增減
-     sections：表向き、裏顔這種分段介紹 */
+  /* CHAR */
   characters: [
     {
       id: 'saki',
@@ -180,9 +150,6 @@ window.SITE = {
     },
   ],
 
-  /* ---------- CHARACTER 頁往下滑的「ふたり」區（互動關係表） ----------
-     每一條拉桿：label 是項目名稱
-     數字是 0～100，名字要對應上面角色的 id（saki / hinano） */
   relationship: {
     title: '離家出走中　共依存的兩人♡',
     sliders: [
@@ -199,19 +166,13 @@ window.SITE = {
 所以要把對方抓的緊緊的絕對不分開，就這樣每天每天互相撒嬌和溺愛的甜蜜日常♡`,
   },
 
-  /* ---------- GALLERY（圖庫） ----------
-     新作品加在「最上面」，編號會自動往上加
-     thumb（縮圖）可以不填，不填就直接用原圖 */
+  /* GALLERY
+  往上添加最新 thumb = 縮圖*/
   gallery: [
     { title: 'ゆらゆら', date: '2026/11/03', image: 'images/hinano/chibi-bg.gif' },
   ],
 
-  /* ---------- STORY（文章、短漫） ----------
-     id：網址會用到，不要重複（例如 003）
-     type: 'novel' = 文章，要填 file（文字檔放在 stories 資料夾）
-     type: 'comic' = 漫畫，pages 依序填每一頁的圖片
-     thumb（縮圖）可以不填
-     一樣是新作品加在最上面 */
+  /* STORY */
   stories: [
     {
       id: '002',
@@ -232,20 +193,18 @@ window.SITE = {
     },
   ],
 
-  /* ---------- WARDROBE（服裝設計） ----------
-     chara 要對應上面角色的 id（saki / hinano） */
+  /* 服 */
   wardrobe: [
     { chara: 'saki',   name: 'いつもの服', image: 'images/saki/full.png',   note: `（デザインのポイントなど）` },
     { chara: 'hinano', name: 'いつもの服', image: 'images/hinano/full.png', note: `（デザインのポイントなど）` },
   ],
 
-  /* ---------- UPDATE（更新紀錄） ----------
-     新的寫在最上面 */
+  /* UPDATE */
   updates: [
     { date: '2026/11/03', text: 'サイトを公開しました。' },
   ],
 
-  /* ---------- ABOUT（作者、連結、使用規範） ---------- */
+  /* ABOUT */
   about: {
     text: `（作者の自己紹介をここに）`,
     links: [
