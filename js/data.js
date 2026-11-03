@@ -38,7 +38,7 @@ window.SITE = {
     },
     {
       speaker: '',
-      lines: ['二人だけの居場所は\n\nきっと、何処かにあるから'],
+      lines: ['二人だけの居場所は\nきっと、何処かにあるから'],
       choices: [
         { text: '……。' },
         { text: 'いや、そんなこと急に……' },
@@ -63,7 +63,7 @@ window.SITE = {
    
   badEnd: {
     speaker: '',
-    lines: ['二人だけの居場所二人二人だけの居場所\n\nはきっと何処何処何処かにあるからだけ\n\nの居場所はきっと何処かにあるからはき','きっと、何処かにあるから'],
+    lines: ['二人だけの居場所二人二人だけの居場所\nはきっと何処何処何処かにあるからだけ\nの居場所はきっと何処かにあるからはき','きっと、何処かにあるから'],
     choices: [
       { text: '……。' },
       { text: '……。' },
@@ -200,8 +200,11 @@ window.SITE = {
 
   /* 服 */
   wardrobe: [
-    { chara: 'saki',   name: 'いつもの服', image: 'images/saki/full.png',   note: `（デザインのポイントなど）` },
-    { chara: 'hinano', name: 'いつもの服', image: 'images/hinano/full.png', note: `（デザインのポイントなど）` },
+    { chara: 'saki',   name: 'お気に入りの日常服', image: 'images/gallery/plu-saki-nbg.png', note: 'いつも着てる\n出發後兩個人一起買的第一套新衣服\n\nDesign by / 噗幣轉蛋' },
+    { chara: 'hinano', name: 'お気に入りの日常服', image: 'images/gallery/plu-saki-nbg.png', note: 'いつも着てる\n出發後兩個人一起買的第一套新衣服\n\nDesign by / 噗幣轉蛋' },
+
+    { chara: 'saki',   name: 'ゆっるとお出かけるコーデ', image: 'images/gallery/ming-hinano.png', note: 'Design by /  阿明 ' },
+    { chara: 'hinano', name: 'ゆっるとお出かけるコーデ', image: 'images/gallery/ming-hinano.png', note: 'Design by /  阿明 ' },
   ],
 
   /* UPDATE */
