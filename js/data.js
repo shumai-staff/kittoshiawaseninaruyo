@@ -11,7 +11,7 @@ window.SITE = {
      'images/futari/komaru02.3.png',
      'images/futari/nes01-nbg.png',
      'images/futari/nes02.png',
-     'images/futari/ogura-an3.png',
+     'images/futari/ogura-an.png',
    ],
    
   /* 主選單 */
