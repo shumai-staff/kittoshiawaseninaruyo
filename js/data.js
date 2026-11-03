@@ -200,7 +200,7 @@ window.SITE = {
 
   /* ABOUT */
   about: {
-    text: ` `,
+    text: `太好了`,
     links: [
       { label: '施工', url: ' ' },
     ],
