@@ -257,17 +257,8 @@ window.SITE = {
       title: '〖中華パロ〗設定',
       date: '2026/11/14',
       tag : '設定',
-      thumb: 'images/gallery/nes03.PNG'
+      thumb: 'images/gallery/nes03.PNG',
       file: 'stories/004.txt',
-    },
-    {
-      id: '003',
-      type: 'novel',
-      title: '',
-      date: '2026/08/15',
-      tag : '手描きMAD',
-      thumb: 'images/gallery/shama.jpg'
-      file: 'stories/001.txt',
     },
     {
       id: '002',
@@ -286,7 +277,7 @@ window.SITE = {
       title: '紗痲',
       date: '2026/08/15',
       tag : '手描きMAD',
-      thumb: 'images/gallery/shama.jpg'
+      thumb: 'images/gallery/shama.jpg',
       file: 'stories/001.txt',
     },
   ],
