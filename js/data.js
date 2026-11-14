@@ -275,8 +275,8 @@ window.SITE = {
       id: '003',
       type: 'novel',
       title: '〖配信者パロ〗設定',
-      date: '2026/11/14',
-      tag : ［'R18', '設定'］,
+      date: '2026/10/29',
+      tag : ['R18', '設定'],
       file: 'stories/003.txt',
     },
     {
