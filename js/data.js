@@ -253,6 +253,15 @@ window.SITE = {
   },  
   
   stories: [
+   {
+      id: '000',
+      type: 'novel',
+      title: '〖詳細互動模式〗是這樣的兩個人 ♪',
+      date: '置頂',
+      tag : '設定',
+      thumb: 'images/gallery/mii-draft.png',
+      file: 'stories/000.txt',
+    },
     {
       id: '004',
       type: 'novel',
