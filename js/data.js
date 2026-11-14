@@ -276,7 +276,7 @@ window.SITE = {
     {
       id: '001',
       type: 'novel',
-      title: '紗痲',
+      title: '〖手描き〗紗痲',
       date: '2026/08/15',
       tag : '手描きMAD',
       thumb: 'images/gallery/shama.jpg',
