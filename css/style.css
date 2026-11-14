@@ -842,8 +842,9 @@ ruby rt { font-size: .5em; color: var(--lilac); }
   display: block;
   height: 100%;
   width: 0;
-  background: repeating-linear-gradient(90deg, var(--pink) 0 8px, var(--blue) 8px 16px);
-  animation: fill var(--dur, .7s) steps(10) forwards;
+  background: linear-gradient(90deg, var(--violet-deep), var(--violet) 70%, var(--lilac));
+  box-shadow: 0 0 10px rgba(112, 82, 204, .8);
+  animation: fill var(--dur, .7s) ease-out forwards;
 }
 @keyframes fill { to { width: 100%; } }
 
