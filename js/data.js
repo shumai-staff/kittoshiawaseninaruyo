@@ -175,7 +175,7 @@ window.SITE = {
     { title: '辣味魚醬　様', date: '2026/11/01', image: 'images/gallery/spfh.png',  },
     { title: '阿明　様', date: '2026/11/01', image: 'images/gallery/ming.jpg',  },
     { title: 'ネス　様', date: '2026/10/21', image: 'images/gallery/nes01.png',  },
-    { title: '小丸子　様', date: '2026/10/16', image: 'images/gallery/komaru02.2.png',  },
+    { title: '小丸子　様', date: '2026/10/16', image: 'images/gallery/komaru02.2.jpg',  },
     { title: '噗幣轉蛋', date: '2026/10/08', image: 'images/gallery/plu-saki.png',  },
     { title: '噗幣轉蛋', date: '2026/10/08', image: 'images/gallery/plu-hinano.png',  },
     { title: '小倉紅豆　様', date: '2026/10/05', image: 'images/gallery/ogura-an.png',  },
