@@ -284,8 +284,8 @@ window.SITE = {
     太好了
     我最近很想吃煲仔飯
 
-    網站中使用的所有圖
-    在Gallery中都有標註繪師
+    網站中使用的所有圖片
+    在Gallery中都已標註繪師
     謝謝大人們願意畫我家孩子！
 
     網頁UI ▸ 空想曲線
@@ -293,7 +293,7 @@ window.SITE = {
     素敵な素材を有難うございます。
     `,
     links: [
-      { label: '施工', url: ' ' },
+      { label: '連絡先 ▸ INSTAGRAM @shumai.staff', url: 'https://www.instagram.com/shumai.staff' },
     ],
     rules: `無断転載・自作発言・AI学習への使用はご遠慮ください。
 禁止轉載、自作發言、用於 AI 學習。`,
