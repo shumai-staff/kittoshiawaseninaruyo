@@ -252,11 +252,13 @@ window.SITE = {
   
   stories: [
     {
-      id: '001',
-      type: 'novel',
-      title: '試作',
-      date: '2026/11/03',
-      file: 'stories/001.txt',
+      id: '002',
+      type: 'comic',
+      title: 'ネス　様',
+      date: '2026/10/10',
+      tag : ['R18', '漫画']
+      file: 'images/gallery/nes0.1.png',
+      file: 'images/gallery/nes0.2.png',
     },
   ],
 
