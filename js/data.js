@@ -267,7 +267,7 @@ window.SITE = {
       type: 'novel',
       title: '紗痲',
       date: '2026/08/15',
-      tag : '#E3D19F',
+      tag : '手描きMAD',
       file: 'stories/001.txt',
     },
   ],
