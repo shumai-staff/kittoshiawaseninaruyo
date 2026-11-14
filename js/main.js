@@ -704,13 +704,22 @@
   /* STORY */
   let storyPage = 0;
   const TYPE = { novel: '小説', comic: '漫画' };
+  // 分類標籤：story 沒寫 tag 就顯示 小説／漫画；顏色寫在 data.js 的 storyTags
+  function tagsOf(s) {
+    const list = s.tag ? (Array.isArray(s.tag) ? s.tag : [s.tag]) : [TYPE[s.type]].filter(Boolean);
+    const colors = S.storyTags || {};
+    return list.map((t) => {
+      const c = colors[t] || (t === TYPE.comic ? 'var(--blue)' : 'var(--pink)');
+      return `<span class="tag" style="color:${esc(c)}">${esc(t)}</span>`;
+    }).join('');
+  }
   pages.story = () => {
     const list = S.stories;
     const n = list.length;
     const { items, pager } = slotsHTML(list, storyPage, (s, i) =>
       `<a class="slot" href="#story-${esc(s.id)}">
         ${thumbHTML(s.thumb, TYPE[s.type] || 'NO IMAGE')}
-        <span><span class="slot-no">No.${pad(n - i)}</span><span class="slot-title">${esc(s.title)}</span><span class="slot-meta"><time>${esc(s.date)}</time><span class="tag ${s.type === 'comic' ? 'comic' : ''}">${TYPE[s.type] || ''}</span></span></span>
+        <span><span class="slot-no">No.${pad(n - i)}</span><span class="slot-title">${esc(s.title)}</span><span class="slot-meta"><time>${esc(s.date)}</time>${tagsOf(s)}</span></span>
       </a>`);
     page.innerHTML = head('story') + (n ? `<div class="slots single">${items}</div>${pager}` : '<p class="empty">まだ作品がありません</p>');
     $$('.slot', page).forEach((a) => a.addEventListener('click', async (e) => {
@@ -740,7 +749,7 @@
     const older = list[i + 1];
     page.innerHTML =
       `<article class="reader">
-        <header class="reader-head"><h2>${esc(s.title)}</h2><p class="sys">${esc(s.date)}　${TYPE[s.type] || ''}</p>${ORN}</header>
+        <header class="reader-head"><h2>${esc(s.title)}</h2><p class="sys">${esc(s.date)}　${tagsOf(s)}</p>${ORN}</header>
         <div class="${s.type === 'comic' ? 'comic' : 'novel'}" id="story-body"></div>
         <nav class="reader-nav">
           <span>${older ? `<a href="#story-${esc(older.id)}">◀ ${esc(older.title)}</a>` : ''}</span>
@@ -761,15 +770,52 @@
       });
   }
 
+  // 小說本文：Markdown 的常用寫法 ＋ ｜漢字《かんじ》注音
+  function inlineMd(t) {
+    return esc(t)
+      .replace(/[|｜]([^|｜《\n]+)《([^》\n]+)》/g, '<ruby>$1<rt>$2</rt></ruby>')
+      .replace(/!\[([^\]\n]*)\]\(([^)\s]+)\)/g, '<img src="$2" alt="$1" loading="lazy">')
+      .replace(/\[([^\]\n]+)\]\(([^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+      .replace(/\*\*([^*\n]+?)\*\*/g, '<strong>$1</strong>')
+      .replace(/(^|[^*])\*([^*\n]+?)\*(?!\*)/g, '$1<em>$2</em>')
+      .replace(/~~([^~\n]+?)~~/g, '<del>$1</del>');
+  }
   function parseNovel(text) {
-    return text.replace(/\r\n?/g, '\n').trim().split(/\n\s*\n/).map((block) => {
-      const img = /^!\[([^\]]*)\]\(([^)]+)\)$/.exec(block.trim());
-      if (img) return `<img src="${esc(img[2])}" alt="${esc(img[1])}" loading="lazy">`;
-      const html = esc(block)
-        .replace(/[|｜]([^|｜《\n]+)《([^》\n]+)》/g, '<ruby>$1<rt>$2</rt></ruby>')
-        .replace(/\n/g, '<br>');
-      return `<p>${html}</p>`;
-    }).join('');
+    const out = [];
+    let buf = null;
+    const flush = () => {
+      if (!buf) return;
+      if (buf.kind === 'p') out.push(`<p>${buf.lines.map(inlineMd).join('<br>')}</p>`);
+      if (buf.kind === 'quote') out.push(`<blockquote>${buf.lines.map(inlineMd).join('<br>')}</blockquote>`);
+      if (buf.kind === 'list') out.push(`<ul>${buf.lines.map((l) => `<li>${inlineMd(l)}</li>`).join('')}</ul>`);
+      buf = null;
+    };
+    const push = (kind, line) => {
+      if (!buf || buf.kind !== kind) { flush(); buf = { kind, lines: [] }; }
+      buf.lines.push(line);
+    };
+    for (const raw of text.replace(/\r\n?/g, '\n').trim().split('\n')) {
+      const line = raw.replace(/\s+$/, '');
+      let m;
+      if (!line.trim()) { flush(); continue; }
+      if ((m = /^(#{1,3})\s+(.+)$/.exec(line))) {
+        flush();
+        const lv = m[1].length + 2;
+        out.push(`<h${lv} class="md-h">${inlineMd(m[2])}</h${lv}>`);
+        continue;
+      }
+      if (/^\s*(-{3,}|\*{3,}|_{3,}|＊{3,})\s*$/.test(line)) { flush(); out.push('<hr>'); continue; }
+      if ((m = /^\s*!\[([^\]]*)\]\(([^)\s]+)\)\s*$/.exec(line))) {
+        flush();
+        out.push(`<img src="${esc(m[2])}" alt="${esc(m[1])}" loading="lazy">`);
+        continue;
+      }
+      if ((m = /^>\s?(.*)$/.exec(line))) { push('quote', m[1]); continue; }
+      if ((m = /^[-*]\s+(.+)$/.exec(line))) { push('list', m[1]); continue; }
+      push('p', line);
+    }
+    flush();
+    return out.join('');
   }
 
   /* 衣 */
