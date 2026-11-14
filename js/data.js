@@ -256,9 +256,11 @@ window.SITE = {
       type: 'comic',
       title: 'ネス　様',
       date: '2026/10/10',
-      tag : ['R18', '漫画']
-      file: 'images/gallery/nes0.1.png',
-      file: 'images/gallery/nes0.2.png',
+      tag : ['R18', '漫画'],
+      pages: [
+        'images/gallery/nes0.1.png',
+        'images/gallery/nes0.2.png',
+      ],
     },
   ],
 
