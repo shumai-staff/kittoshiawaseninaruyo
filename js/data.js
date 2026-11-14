@@ -272,6 +272,14 @@ window.SITE = {
       file: 'stories/004.txt',
     },
     {
+      id: '003',
+      type: 'novel',
+      title: '〖配信者パロ〗設定',
+      date: '2026/11/14',
+      tag : ［'R18', '設定'］,
+      file: 'stories/003.txt',
+    },
+    {
       id: '002',
       type: 'comic',
       title: 'ネス　様',
