@@ -260,7 +260,7 @@ window.SITE = {
       date: '2026/11/14',
       tag : '設定',
       thumb: 'images/gallery/nes03.PNG',
-      file: 'stories/004.txt',
+      file: 'stories/003.txt',
     },
     {
       id: '002',
