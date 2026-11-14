@@ -247,9 +247,9 @@ window.SITE = {
   storyTags: {
     '小説': '#e4a9c5',
     '漫画': '#8796de',
-    '設定': '#D19D7F',
+    '設定': '#BAA4D6',
     'R18': '#e0566b',
-    '手描きMAD': '#BAA4D6',
+    '手描きMAD': '#D19D7F',
   },  
   
   stories: [
