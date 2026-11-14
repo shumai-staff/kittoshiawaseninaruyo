@@ -170,9 +170,15 @@ window.SITE = {
   /* GALLERY
   往上添加最新 thumb = 縮圖*/
   gallery: [
-    { title: '噗幣轉蛋', date: '2025/07/15', image: 'images/gallery/ayu-saki.png',  },
-    { title: '噗幣轉蛋', date: '2025/07/15', image: 'images/gallery/ayu-hinano.png',  },
-    { title: '', date: '2025/07/15', image: 'images/gallery/ayu-hinano.png',  },
+    { title: '噗幣轉蛋', date: '2026/10/08', image: 'images/gallery/plu-saki.png',  },
+    { title: '噗幣轉蛋', date: '2026/10/08', image: 'images/gallery/plu-hinano.png',  },
+    { title: '小倉紅豆　様', date: '2026/10/05', image: 'images/gallery/ogura-an.png',  },
+    { title: '床腳　様', date: '2026/10/04', image: 'images/gallery/bedfoot.png',  },
+    { title: '小丸子　様', date: '2026/10/04', image: 'images/gallery/komaru01.jpg',  },
+    { title: '米畫師', date: '2026/10/03', image: 'images/gallery/miiqm-saki.gif',  },
+    { title: '米畫師', date: '2026/10/03', image: 'images/gallery/miiqm-hinano.gif',  },
+    { title: '米畫師', date: '2026/10/02', image: 'images/gallery/mii.jpg',  },
+    { title: '自分絵', date: '2026/08/15', image: 'images/gallery/shama.jpg',  },
     { title: 'アユ　様', date: '2025/07/15', image: 'images/gallery/ayu-saki.png',  },
     { title: 'アユ　様', date: '2025/07/15', image: 'images/gallery/ayu-hinano.png',  },
   ],
