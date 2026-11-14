@@ -148,7 +148,7 @@ window.SITE = {
       card: 'images/hinano/plu-hinano-nbg.2.png',
       icon: 'images/hinano/spfh-hinano.2.png',
       heightCm: 150,
-      tags: ['受け', '無口', '地雷系女子'],
+      tags: ['無口', '地雷系女子'],
       profile: [
         ['性別', '女'],
         ['年齢', '17'],
@@ -202,7 +202,15 @@ window.SITE = {
       { label: '素直さ', saki: 85, hinano: 10 },
       { label: '依存度', saki: 100, hinano: 100 },
     ],
-    text: `工事中……`,
+    text: `
+    沒有在交往
+    理所當然維持著等同交往的肢體接觸和距離感
+    情感上也是相互依附的重度共依存
+
+    兩個人都是高攻低防的類型
+    會主動、一旦輪對方主動的時候卻會慌張
+
+    `,
   },
 
   /* GALLERY
