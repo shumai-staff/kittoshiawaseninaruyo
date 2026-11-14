@@ -262,6 +262,14 @@ window.SITE = {
         'images/gallery/nes0.2.png',
       ],
     },
+    {
+      id: '001',
+      type: 'novel',
+      title: '紗痲',
+      date: '2026/08/15',
+      tag : '#E3D19F',
+      file: 'stories/001.txt',
+    },
   ],
 
   /* 服 */
