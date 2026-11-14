@@ -18,9 +18,9 @@ window.SITE = {
   menu: [
     { id: 'intro',     label: 'INTRODUCTION', ja: 'あらすじ' },
     { id: 'character', label: 'CHARACTER',    ja: 'キャラクター' },
-    { id: 'gallery',   label: 'GALLERY',      ja: 'ギャラリー' },
-    { id: 'story',     label: 'STORY',        ja: 'ストーリー' },
     { id: 'wardrobe',  label: 'WARDROBE',     ja: '衣装' },
+    { id: 'story',     label: 'STORY',        ja: 'ストーリー' },
+    { id: 'gallery',   label: 'GALLERY',      ja: 'ギャラリー' },
     { id: 'update',    label: 'UPDATE',       ja: '更新履歴' },
     { id: 'about',     label: 'ABOUT',        ja: 'このサイトについて' },
   ],
