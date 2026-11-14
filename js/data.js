@@ -268,6 +268,7 @@ window.SITE = {
       title: '紗痲',
       date: '2026/08/15',
       tag : '手描きMAD',
+      thumb: 'images/gallery/shama.jpg'
       file: 'stories/001.txt',
     },
   ],
