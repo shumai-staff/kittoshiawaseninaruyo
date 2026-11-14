@@ -170,6 +170,7 @@ window.SITE = {
   /* GALLERY
   往上添加最新 thumb = 縮圖*/
   gallery: [
+    { title: '小丸子　様', date: '2026/10/16', image: 'images/gallery/komaru02.2.png',  },
     { title: '噗幣轉蛋', date: '2026/10/08', image: 'images/gallery/plu-saki.png',  },
     { title: '噗幣轉蛋', date: '2026/10/08', image: 'images/gallery/plu-hinano.png',  },
     { title: '小倉紅豆　様', date: '2026/10/05', image: 'images/gallery/ogura-an.png',  },
