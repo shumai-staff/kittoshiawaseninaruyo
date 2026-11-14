@@ -170,7 +170,7 @@ window.SITE = {
   /* GALLERY
   往上添加最新 thumb = 縮圖*/
   gallery: [
-    { title: 'ㄒㄌ　様', date: '2026/11/13', image: 'images/gallery/nes03.png',  },
+    { title: 'ㄒㄌ　様', date: '2026/11/13', image: 'images/gallery/nes03.PNG',  },
     { title: 'ネス　様', date: '2026/11/02', image: 'images/gallery/nes02.png',  },
     { title: '辣味魚醬　様', date: '2026/11/01', image: 'images/gallery/spfh.png',  },
     { title: '阿明　様', date: '2026/11/01', image: 'images/gallery/ming.jpg',  },
