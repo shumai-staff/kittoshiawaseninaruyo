@@ -209,11 +209,14 @@ window.SITE = {
 
   /* 服 */
   wardrobe: [
-    { chara: 'saki',   name: '+', image: 'images/gallery/plu-saki-nbg.1.png', note: 'いつも着てる\n出發後兩個人一起買的第一套新衣服\n\nDesign by / 噗幣轉蛋' },
-    { chara: 'hinano', name: '+', image: 'images/gallery/plu-hinano-nbg.1.png', note: 'いつも着てる\n出發後兩個人一起買的第一套新衣服\n\nDesign by / 噗幣轉蛋' },
+    { chara: 'saki',   name: '01', image: 'images/gallery/plu-saki-nbg.1.png', note: 'いつも着てる\nお気に入りの日常服\n出發後兩個人一起買的第一套新衣服\n\nDesign by / 噗幣轉蛋' },
+    { chara: 'hinano', name: '01', image: 'images/gallery/plu-hinano-nbg.1.png', note: 'いつも着てる\nお気に入りの日常服\n出發後兩個人一起買的第一套新衣服\n\nDesign by / 噗幣轉蛋' },
 
-    { chara: 'saki',   name: '+', image: 'images/gallery/ming-saki.png', note: 'Design by /  阿明 ' },
-    { chara: 'hinano', name: '+', image: 'images/gallery/ming-hinano.png', note: 'Design by /  阿明 ' },
+    { chara: 'saki',   name: '02', image: 'images/gallery/ming-saki.png', note: 'のんぴりお出かけ服\n\nDesign by /  阿明 様' },
+    { chara: 'hinano', name: '02', image: 'images/gallery/ming-hinano.png', note: 'のんぴりお出かけ服\n\nDesign by /  阿明 様' },
+    
+    { chara: 'saki',   name: '03', image: 'images/gallery/nes03-saki.png', note: 'チャイナ服\n『満月飯店』の店員ちゃん\n\nDesign by /  ㄒㄌ 様' },
+    { chara: 'hinano', name: '03', image: 'images/gallery/nes03-hinano.png', note: 'チャイナ服\n『満月飯店』の店員ちゃん\n\nDesign by /  ㄒㄌ 様' },
   ],
 
   /* UPDATE */
