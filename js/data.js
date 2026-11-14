@@ -170,7 +170,11 @@ window.SITE = {
   /* GALLERY
   往上添加最新 thumb = 縮圖*/
   gallery: [
+    { title: '噗幣轉蛋', date: '2025/07/15', image: 'images/gallery/ayu-saki.png',  },
+    { title: '噗幣轉蛋', date: '2025/07/15', image: 'images/gallery/ayu-hinano.png',  },
+    { title: '', date: '2025/07/15', image: 'images/gallery/ayu-hinano.png',  },
     { title: 'アユ　様', date: '2025/07/15', image: 'images/gallery/ayu-saki.png',  },
+    { title: 'アユ　様', date: '2025/07/15', image: 'images/gallery/ayu-hinano.png',  },
   ],
 
   /* STORY */
