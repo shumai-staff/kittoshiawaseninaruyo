@@ -252,6 +252,24 @@ window.SITE = {
   
   stories: [
     {
+      id: '004',
+      type: 'novel',
+      title: '〖中華パロ〗設定',
+      date: '2026/11/14',
+      tag : '設定',
+      thumb: 'images/gallery/nes03.PNG'
+      file: 'stories/004.txt',
+    },
+    {
+      id: '003',
+      type: 'novel',
+      title: '',
+      date: '2026/08/15',
+      tag : '手描きMAD',
+      thumb: 'images/gallery/shama.jpg'
+      file: 'stories/001.txt',
+    },
+    {
       id: '002',
       type: 'comic',
       title: 'ネス　様',
