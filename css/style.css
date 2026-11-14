@@ -948,3 +948,17 @@ ruby rt { font-size: .5em; color: var(--lilac); }
 .game.is-bad .msg-text { color: #922628; text-shadow: 0 0 8px rgba(220, 60, 80, .7); }
 
 .msg-text { white-space: pre-line; }
+
+
+/* STORY：分類標籤、本文的 Markdown */
+.reader-head .tag + .tag { margin-left: .8em; }
+.novel .md-h { margin: 2em 0 .8em; font-weight: 700; letter-spacing: .08em; line-height: 1.6; }
+.novel h3.md-h { font-size: 1.3rem; }
+.novel h4.md-h { font-size: 1.15rem; }
+.novel h5.md-h { font-size: 1.05rem; color: var(--lilac); }
+.novel hr { border: 0; height: 26px; margin: 2.4em auto; background: url(../images/ui/ornament-bottom.png) center / 136px 26px no-repeat; }
+.novel blockquote { margin: 0 0 1.7em; padding: .2em 0 .2em 1.1em; border-left: 2px solid var(--lilac); color: #d8d3e3; }
+.novel ul { margin: 0 0 1.7em; padding-left: 1.4em; }
+.novel strong { color: #fff; }
+.novel del { opacity: .6; }
+.novel a { color: var(--lilac); }
