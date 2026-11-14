@@ -174,6 +174,13 @@ window.SITE = {
   ],
 
   /* STORY */
+  storyTags: {
+    '小説': '#e4a9c5',
+    '漫画': '#8796de',
+    '設定': '#D19D7F',
+    'R18': '#e0566b',
+  },  
+  
   stories: [
     {
       id: '001',
