@@ -224,7 +224,7 @@ window.SITE = {
   /* GALLERY
   往上添加最新 thumb = 縮圖*/
   gallery: [
-    { title: 'ㄒㄌ　様', date: '2026/11/13', image: 'images/gallery/nes03.PNG',  },
+    { title: 'レイ　様', date: '2026/11/13', image: 'images/gallery/nes03.PNG',  },
     { title: 'ネス　様', date: '2026/11/02', image: 'images/gallery/nes02.png',  },
     { title: '辣味魚醬　様', date: '2026/11/01', image: 'images/gallery/spfh.png',  },
     { title: '阿明　様', date: '2026/11/01', image: 'images/gallery/ming.jpg',  },
@@ -259,7 +259,7 @@ window.SITE = {
       title: '〖詳細互動模式〗是這樣的兩個人 ♪',
       date: '置頂',
       tag : '設定',
-      thumb: 'images/gallery/mii-draft.png',
+      thumb: 'images/gallery/komaru01.jpg',
       file: 'stories/000.txt',
     },
     {
@@ -309,8 +309,8 @@ window.SITE = {
     { chara: 'saki',   name: '02', image: 'images/gallery/ming-saki.png', note: 'のんぴりお出かけ服\n\nDesign by /  阿明 様' },
     { chara: 'hinano', name: '02', image: 'images/gallery/ming-hinano.png', note: 'のんぴりお出かけ服\n\nDesign by /  阿明 様' },
     
-    { chara: 'saki',   name: '03', image: 'images/gallery/nes03-saki.PNG', note: 'チャイナ服\n『満月飯店』の店員ちゃん\n\nDesign by /  ㄒㄌ 様' },
-    { chara: 'hinano', name: '03', image: 'images/gallery/nes03-hinano.PNG', note: 'チャイナ服\n『満月飯店』の店員ちゃん\n\nDesign by /  ㄒㄌ 様' },
+    { chara: 'saki',   name: '03', image: 'images/gallery/nes03-saki.PNG', note: 'チャイナ服\n『満月飯店』の店員ちゃん\n\nDesign by /  レイ 様' },
+    { chara: 'hinano', name: '03', image: 'images/gallery/nes03-hinano.PNG', note: 'チャイナ服\n『満月飯店』の店員ちゃん\n\nDesign by /  レイ 様' },
   ],
 
   /* UPDATE */
