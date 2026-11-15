@@ -223,6 +223,7 @@ window.SITE = {
   /* GALLERY
   往上添加最新 thumb = 縮圖*/
   gallery: [
+    { title: '青雀　様', date: '2026/11/15', image: 'images/gallery/kapa.PNG',  },
     { title: 'レイ　様', date: '2026/11/13', image: 'images/gallery/nes03.PNG',  },
     { title: 'ネス　様', date: '2026/11/02', image: 'images/gallery/nes02.png',  },
     { title: '辣味魚醬　様', date: '2026/11/01', image: 'images/gallery/spfh.png',  },
@@ -267,7 +268,7 @@ window.SITE = {
       title: '〖中華パロ〗設定',
       date: '2026/11/14',
       tag : '設定',
-      thumb: 'images/gallery/nes03.PNG',
+      thumb: 'images/gallery/kapa.PNG',
       file: 'stories/004.txt',
     },
     {
