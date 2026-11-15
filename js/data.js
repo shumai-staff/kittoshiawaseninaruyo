@@ -200,7 +200,7 @@ window.SITE = {
     title: '',
     sliders: [
       { label: '主導権', saki: 30,  hinano: 80 },
-      { label: '独占欲', saki: 90,  hinano: 40 },
+      { label: '独占欲', saki: 90,  hinano: 45 },
       { label: '甘え', saki: 55, hinano: 80 },
       { label: '甘やかし', saki: 75, hinano: 65 },
       { label: '素直さ', saki: 85, hinano: 10 },
@@ -209,14 +209,13 @@ window.SITE = {
     text: `
     沒有在交往
     理所當然維持著等同交往的肢體接觸
-    情感上也是相互依附的重度共依存
-
+    
     兩個人都是高攻低防的類型
     會主動、一旦輪對方主動的時候卻會慌張
 
     因為只剩下對方了
     所以要緊緊抓住彼此不放開
-    就這樣每天每天互相撒嬌和寵溺著♡
+    重度共依存的關係性
 
     `,
   },
