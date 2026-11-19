@@ -224,6 +224,7 @@ window.SITE = {
   往上添加最新 thumb = 縮圖*/
   gallery: [
     { title: '七七乳加　様', date: '2026/11/18', image: 'images/gallery/7701.jpeg', thumb: 'images/gallery/thumbs/7702-thumb.jpg', },
+    { title: '九月　様', date: '2026/11/17', image: 'images/gallery/sep.png', },
     { title: '青雀　様', date: '2026/11/15', image: 'images/gallery/kapa.PNG', thumb: 'images/gallery/thumbs/kapa-thumb.png', },
     { title: 'レイ　様', date: '2026/11/13', image: 'images/gallery/nes03.PNG',  },
     { title: 'ネス　様', date: '2026/11/02', image: 'images/gallery/nes02.png',  },
